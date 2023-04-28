@@ -27,10 +27,6 @@ class Hero extends Model
         'image',
     ];
 
-    // public function skill():HasMany {
-    //     return $this->hasMany(Skill::class, 'hero_id', 'id');
-    // }
-
     public function skills():HasMany {
         return $this->hasMany(Skill::class, 'hero_id', 'id');
     }
