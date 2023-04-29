@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\HeroStoreRequest;
+use App\Http\Requests\HeroUpdateRequest;
 use App\Http\Resources\HeroResource;
 use App\Models\Hero;
 use Illuminate\Auth\Access\Gate;
@@ -40,7 +41,7 @@ class HeroController extends Controller
         return new HeroResource($hero);
     }
      
-    public function update(HeroStoreRequest $request, Hero $hero) {
+    public function update(HeroUpdateRequest $request, Hero $hero) {
         $data = $request->validated();
         
         if ($request->hasFile('image')) {

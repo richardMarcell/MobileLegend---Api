@@ -27,39 +27,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
             Route::put('/{hero}', [HeroController::class, 'update'])->name('update');
             Route::delete('/{hero}', [HeroController::class, 'destroy'])->name('destroy');
         });
-    
-        // Route::prefix()->name()->group(function() {
-    
-        // });
-    
-        // Route::prefix()->name()->group(function() {
-    
-        // });
     });
 });
-
-
-// Route::prefix('v1')->group(function() {
-//     Route::prefix('basketball-courts')->name('basketball-courts.')->group(function() {
-//         Route::get('/', [BasketBallCourtController::class, 'index'])->name('index');
-//         Route::get('/{court}', [BasketBallCourtController::class, 'show'])->name('show');
-//         Route::post('/', [BasketBallCourtController::class, 'store'])->name('store');
-//         Route::put('/{court}', [BasketBallCourtController::class, 'update'])->name('update');
-//         Route::delete('/{court}', [BasketBallCourtController::class, 'destroy'])->name('delete');
-//     });
-
-//     Route::prefix('booking')->name('booking.')->group(function() {
-//         Route::get('/', [BookingController::class, 'index'])->name('index');
-//         Route::post('/', [BookingController::class, 'store'])->name('store');
-//     });
-
-//     Route::prefix('join')->name('join.')->group(function() {
-//         Route::get('/', [BookingController::class, 'index'])->name('index');
-//         Route::post('/}', [BookingController::class, 'store'])->name('store');
-//     });
-
-//     Route::get('basketball-courts-order', [BasketBallCourtsOrderController::class, 'index'])->name('basketball-courts-order.index');
-
-//     Route::get('booking', [BookingController::class, 'index'])->name('booking.index');
-// });
 

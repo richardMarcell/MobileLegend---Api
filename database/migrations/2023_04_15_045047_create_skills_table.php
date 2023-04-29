@@ -18,9 +18,8 @@ return new class extends Migration
             $table->text('description');
             $table->string('category');
             $table->timestamps();
-            $table->foreign('hero_id')->references('id')->on('heroes');
         });
-    }
+    }   
 
     /**
      * Reverse the migrations.
